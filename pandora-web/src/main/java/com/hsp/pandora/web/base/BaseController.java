@@ -38,6 +38,7 @@ public abstract class BaseController<BS extends AbstractBaseServiceSupport<T, Lo
 
     }
 
+    @AuthContext(value = INSERT)
     @PostMapping(value = "/add")
     @ResponseBody
     protected ApiResult add(@ModelAttribute("obj")T obj)
@@ -47,7 +48,7 @@ public abstract class BaseController<BS extends AbstractBaseServiceSupport<T, Lo
     }
 
     @AuthContext(value = DELETE)
-    @GetMapping(value = "/delete")
+    @DeleteMapping(value = "/delete")
     @ResponseBody
     protected ApiResult delete(@RequestParam("id")Long id)
     {
@@ -58,7 +59,7 @@ public abstract class BaseController<BS extends AbstractBaseServiceSupport<T, Lo
     @AuthContext(value = ACCESS)
     @GetMapping(value = "/detail")
     @ResponseBody
-    protected ApiResult toDetail(@RequestParam("id")Long id)
+    protected ApiResult detail(@RequestParam("id")Long id)
     {
         T obj = baseServiceImpl.selectByPrimaryKey(id);
         return ApiResult.of(BaseApiCode.SUCCESS, obj);
