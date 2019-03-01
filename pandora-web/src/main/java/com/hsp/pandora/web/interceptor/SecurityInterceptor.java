@@ -3,6 +3,7 @@ package com.hsp.pandora.web.interceptor;
 import com.alibaba.druid.util.StringUtils;
 import com.hsp.pandora.web.beans.AuthContext;
 import com.hsp.pandora.web.beans.AuthEnum;
+import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 
@@ -21,7 +22,7 @@ import java.util.regex.Pattern;
  * @Time: 16:37
  * @Description: 权限拦截器
  */
-
+@Component
 public class SecurityInterceptor implements HandlerInterceptor
 {
 
