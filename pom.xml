@@ -37,7 +37,7 @@
         <fastjson.version>1.2.47</fastjson.version>
         <httpclient.version>4.5.3</httpclient.version>
         <dom4j.version>1.6.1</dom4j.version>
-        <common.upload.version>1.3.1</common.upload.version>
+        <common.upload.version>1.3.3</common.upload.version>
     </properties>
 
     <parent>
